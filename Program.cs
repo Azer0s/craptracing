@@ -139,8 +139,7 @@ namespace craptracing
             var image = new Vec3[width * height];
             var pixel = 0;
             double invWidth = 1d / width, invHeight = 1d / height;
-            // ReSharper disable once PossibleLossOfFraction
-            double fov = 30, aspectratio = width / height;
+            double fov = 30, aspectratio = (double) width / height;
             var angle = Math.Tan(MathF.PI * 0.5d * fov / 180d);
             // Trace rays
             for (uint y = 0; y < height; ++y)
